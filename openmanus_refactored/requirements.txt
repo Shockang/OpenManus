@@ -1,0 +1,41 @@
+# OpenManus - Minimal Requirements
+# Core dependencies for the refactored agent framework
+
+# Pydantic for data validation
+pydantic~=2.10.6
+
+# OpenAI SDK for LLM interactions
+openai~=1.66.3
+
+# Retry logic
+tenacity~=9.0.0
+
+# YAML configuration
+pyyaml~=6.0.2
+
+# Logging
+loguru~=0.7.3
+
+# Token counting
+tiktoken~=0.9.0
+
+# Async file operations
+aiofiles~=24.1.0
+
+# Colors for terminal output
+colorama~=0.4.6
+
+# TOML configuration
+tomli>=2.0.0
+
+# HTTP client
+httpx>=0.27.0
+
+# Requests for web operations
+requests~=2.32.3
+
+# BeautifulSoup for HTML parsing
+beautifulsoup4~=4.13.3
+
+# Unidiff for file editing
+unidiff~=0.7.5
