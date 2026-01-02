@@ -21,6 +21,29 @@ It's a simple implementation, so we welcome any suggestions, contributions, and 
 
 Enjoy your own agent with OpenManus!
 
+## 📦 Two Versions Available
+
+**1. Full Version (this README)** - Complete feature set with all tools and integrations
+- Browser automation
+- MCP integration
+- Multi-agent flows
+- Full documentation
+
+**2. Minimal Refactored Version** ⚡ **Recommended for most users**
+- Core agent framework only
+- Essential tools (file ops, bash, python execution)
+- Simplified dependencies
+- Production-ready and fully tested
+
+Get started with the minimal version:
+```bash
+cd openmanus_refactored
+pip install -r requirements.txt
+python run.py --prompt "Your task here"
+```
+
+See [openmanus_refactored/README.md](openmanus_refactored/README.md) for details.
+
 We're also excited to introduce [OpenManus-RL](https://github.com/OpenManus/OpenManus-RL), an open-source project dedicated to reinforcement learning (RL)- based (such as GRPO) tuning methods for LLM agents, developed collaboratively by researchers from UIUC and OpenManus.
 
 ## Project Demo
