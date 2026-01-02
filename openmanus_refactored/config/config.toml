@@ -1,0 +1,21 @@
+# Minimal configuration for OpenManus refactored version
+
+[llm]
+model = "gpt-4o-mini"
+base_url = "https://api.openai.com/v1"
+api_key = "your-api-key-here"
+max_tokens = 4096
+temperature = 1.0
+api_type = "openai"
+api_version = ""
+
+[agent]
+max_steps = 20
+max_observe = 10000
+delay = 0.5
+
+[tool.sandbox]
+enable = false
+
+[mcp]
+enable = false

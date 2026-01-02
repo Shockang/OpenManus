@@ -22,7 +22,7 @@ def update_imports(file_path):
     content = re.sub(r'from openmanus_refactored\.logger', 'from openmanus_refactored.core.logger', content)
     content = re.sub(r'from openmanus_refactored\.llm', 'from openmanus_refactored.core.llm', content)
     content = re.sub(r'from openmanus_refactored\.agent\b', 'from openmanus_refactored.core.agent', content)
-    content = re.sub(r'from openmanus_refactored\.tool', 'from openmanus_refactored.toolssss', content)
+    content = re.sub(r'from openmanus_refactored\.tool', 'from openmanus_refactored.toolss', content)
     content = re.sub(r'from openmanus_refactored\.sandbox', 'from openmanus_refactored.utils.sandbox', content)
     content = re.sub(r'from openmanus_refactored\.utils', 'from openmanus_refactored.utils', content)
     content = re.sub(r'from openmanus_refactored\.prompt', 'from openmanus_refactored.core.prompt', content)

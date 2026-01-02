@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional, Union
 
 from pydantic import BaseModel, Field
 
-from openmanus_refactored.utils.logger import logger
+from openmanus_refactored.core.logger import logger
 
 
 # class BaseTool(ABC, BaseModel):

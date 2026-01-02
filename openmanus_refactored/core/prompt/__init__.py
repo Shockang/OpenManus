@@ -1,0 +1,3 @@
+from .manus import NEXT_STEP_PROMPT, SYSTEM_PROMPT
+
+__all__ = ["NEXT_STEP_PROMPT", "SYSTEM_PROMPT"]

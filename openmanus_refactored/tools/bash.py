@@ -3,7 +3,7 @@ import os
 from typing import Optional
 
 from openmanus_refactored.exceptions import ToolError
-from openmanus_refactored.toolsss.base import BaseTool, CLIResult
+from openmanus_refactored.tools.base import BaseTool, CLIResult
 
 
 _BASH_DESCRIPTION = """Execute a bash command in the terminal.
