@@ -1,32 +1,27 @@
 import logging
 import os
+import sys
 
-import structlog
-
-
+# Standard Python logger for minimal version
 ENV_MODE = os.getenv("ENV_MODE", "LOCAL")
 
-renderer = [structlog.processors.JSONRenderer()]
-if ENV_MODE.lower() == "local".lower():
-    renderer = [structlog.dev.ConsoleRenderer()]
+# Create logger
+logger = logging.getLogger("openmanus")
+logger.setLevel(logging.DEBUG)
 
-structlog.configure(
-    processors=[
-        structlog.stdlib.add_log_level,
-        structlog.stdlib.PositionalArgumentsFormatter(),
-        structlog.processors.dict_tracebacks,
-        structlog.processors.CallsiteParameterAdder(
-            {
-                structlog.processors.CallsiteParameter.FILENAME,
-                structlog.processors.CallsiteParameter.FUNC_NAME,
-                structlog.processors.CallsiteParameter.LINENO,
-            }
-        ),
-        structlog.processors.TimeStamper(fmt="iso"),
-        structlog.contextvars.merge_contextvars,
-        *renderer,
-    ],
-    cache_logger_on_first_use=True,
-)
+# Console handler
+console_handler = logging.StreamHandler(sys.stdout)
+console_handler.setLevel(logging.DEBUG)
 
-logger: structlog.stdlib.BoundLogger = structlog.get_logger(level=logging.DEBUG)
+# Formatter
+if ENV_MODE.lower() == "local":
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+else:
+    formatter = logging.Formatter('%(message)s')
+
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+__all__ = ["logger"]

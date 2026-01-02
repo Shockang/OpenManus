@@ -4,12 +4,12 @@ from typing import Any, List, Optional, Union
 
 from pydantic import Field
 
-from openmanus_refactored.core.agent.react import ReActAgent
+from openmanus_refactored.core.react import ReActAgent
 from openmanus_refactored.exceptions import TokenLimitExceeded
 from openmanus_refactored.core.logger import logger
 from openmanus_refactored.core.prompt.toolcall import NEXT_STEP_PROMPT, SYSTEM_PROMPT
 from openmanus_refactored.core.schema import TOOL_CHOICE_TYPE, AgentState, Message, ToolCall, ToolChoice
-from openmanus_refactored.toolsss import CreateChatCompletion, Terminate, ToolCollection
+from openmanus_refactored.tools import CreateChatCompletion, Terminate, ToolCollection
 
 
 TOOL_CALL_REQUIRED = "Tool calls required but none provided"

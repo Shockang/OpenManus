@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 from openmanus_refactored.exceptions import ToolError
 from openmanus_refactored.core.logger import logger
-from openmanus_refactored.toolsss.base import BaseTool, ToolFailure, ToolResult
+from openmanus_refactored.tools.base import BaseTool, ToolFailure, ToolResult
 
 
 class ToolCollection:
