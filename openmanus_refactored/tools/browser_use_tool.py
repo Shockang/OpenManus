@@ -21,7 +21,7 @@ class BrowserUseTool(BaseTool):
         },
     }
 
-    async def run(self, action: str = "") -> ToolResult:
+    async def execute(self, action: str = "") -> ToolResult:
         """Return error indicating browser tool is not available."""
         return ToolResult(
             output="",
